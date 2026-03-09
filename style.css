@@ -1,0 +1,164 @@
+/* A simple css reset */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* The Font Family- Really important!! */
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* reset for images: allow images to scale while keeping aspect ratio and not overflow their containers */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* The hero section styling- use your OWN Hero Image URL here */
+.hero {
+    /* the banner graphic itself */
+    background-image: url('images/Web header.png');
+    width: 100%;                             /* full‑width banner */
+
+    /* control the banner height here – change the value as needed */
+    height: 170px;                            /* ← adjust this line to make the header taller */
+
+    /* make sure the image isn’t tiled when the container grows */
+    background-repeat: no-repeat;
+    /* scale/position the image inside its box */
+    background-size: cover;                  /* or use "contain" if you want the whole graphic visible */
+    background-position: center;
+}
+
+/* BIG text styling for the hero section text */
+.hero-text {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+
+/* nice big font on a banner style background */
+.topic-title{
+    color: white;
+    font-size: 2em;
+    padding: 0.1em 3em;
+    background-color: rgb(143, 190, 235);
+}
+
+/* Three column grid with a nice big gap */
+.topic-content{
+    display: flex;
+    gap: 2em;
+    width: 90%;
+    margin: 2em auto;
+    flex-wrap: nowrap; /* remove if you want wrapping */
+}
+
+/* Styling for the individual topic cards rounded edges background color and a drop shadow */
+.topic-card{
+    background-color: rgb(143, 190, 235);
+    color: white;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    flex: 1 1 30%;
+}
+
+/* Styling for images in topic cards to fit the boxes */
+.topic-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Styling for the topic card titles */
+.topic-card-text{
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    /* center align text */
+    text-align: center;
+}
+
+
+/* Styling for a footer section to take a bit of spcae at the bottom of the page */
+.footer{
+    background-color: rgb(143, 190, 235);
+    color: white;
+    text-align: right;
+    padding: 3em 3em;
+}
+
+/* Navigation styles */
+.site-header {
+    background: #ffffff;
+    padding: 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.main-nav {
+    padding: 12px 20px;
+}
+
+.main-nav .nav-list {
+    display: flex;
+    flex-direction: row; /* force horizontal layout */
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: #f3f6fb;
+    color: #0b1b2b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background .18s ease, transform .08s ease, color .18s;
+    box-shadow: 0 0 0 0 transparent;
+}
+
+.nav-link:hover {
+    background: #e6eefc;
+    transform: translateY(-2px);
+}
+
+.nav-link:active {
+    transform: translateY(0);
+}
+
+/* Active/current page */
+.nav-link[aria-current="page"],
+.nav-link.active {
+    background: #0b5fff;
+    color: #ffffff;
+}
+
+/* Mobile: stack nav */
+@media (max-width: 600px) {
+    .main-nav .nav-list {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .nav-link {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* small polish for hero image placement */
+.hero-image img {
+    max-width: 320px;
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(11, 95, 255, 0.12);
+}
