@@ -159,3 +159,45 @@ video {
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(11, 95, 255, 0.12);
 }
+
+/* Video and description layout */
+.video-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+}
+
+/* Video on the left */
+.video-container {
+    width: 40%;
+}
+
+.video-container video {
+    width: 100%;
+    margin: 0;
+}
+
+/* Description box on the right */
+.description-box {
+    flex: 1;
+    background-color: white;
+    color: #0b1b2b;
+    padding: 1.5em;
+    border-radius: 12px;
+    min-height: 200px;
+}
+
+.description-box h2 {
+    margin-top: 0;
+}
+
+/* Stack everything on smaller screens */
+@media (max-width: 600px) {
+    .video-content {
+        flex-direction: column;
+    }
+
+    .video-container {
+        width: 100%;
+    }
+}
